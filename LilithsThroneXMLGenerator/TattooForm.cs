@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LilithsThroneXMLGenerator
 {
-	public partial class Form1 : Form
+	public partial class TattooForm : Form
 	{
-		public Form1()
+		public TattooForm()
 		{
 			InitializeComponent();
 		}

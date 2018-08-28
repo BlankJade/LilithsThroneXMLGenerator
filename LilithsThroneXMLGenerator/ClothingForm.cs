@@ -392,7 +392,6 @@ namespace LilithsThroneXMLGenerator
 				displacementTab.Dock = DockStyle.Fill;
 				TabPage newTabpage = new TabPage();
 				displacementTab.Parent = this;
-				newTabpage.Parent = this;
 				newTabpage.Text = displacementBox.Text;
 				newTabpage.Controls.Add(displacementTab);
 				tabControl2.TabPages.Add(newTabpage);
@@ -433,9 +432,45 @@ namespace LilithsThroneXMLGenerator
 		{
 			if (tabControl1.SelectedTab == tabControl1.TabPages["prevsav"])
 			{
+				listEdit.Items.Clear();
+				for (int i = 0; i < Clothing_Arrays.lPlacement.Count; i++)
+				{
+					if (Clothing_Arrays.lPlacement[i].Count != 2)
+					{
+						listEdit.Items.Add(Clothing_Arrays.lPlacement[i][0]);
+					}
+					else
+					{
+						listEdit.Items.Add(string.Format("{0} | {1}", Clothing_Arrays.lPlacement[i][0], Clothing_Arrays.lPlacement[i][1]));
+					}
+				}
 				GeneratePreview();
 				previewBox.Text = XDocument.Load(path + "/XMLGeneratorTempData/preview.xml").ToString();
 			}
+		}
+		private void button8_Click(object sender, EventArgs e)
+		{
+			Clothing_Arrays.lclothingAccessBlocked.RemoveAt(listEdit.SelectedIndex);
+			Clothing_Arrays.lclothingAccessRequired.RemoveAt(listEdit.SelectedIndex);
+			Clothing_Arrays.lconcealedSlots.RemoveAt(listEdit.SelectedIndex);
+			Clothing_Arrays.lPlacement.RemoveAt(listEdit.SelectedIndex);
+			Clothing_Arrays.lTexts.RemoveAt(listEdit.SelectedIndex);
+			Clothing_Arrays.lblockedBodyParts.RemoveAt(listEdit.SelectedIndex);
+			listEdit.Items.Clear();
+			for (int i = 0; i < Clothing_Arrays.lPlacement.Count; i++)
+			{
+				if (Clothing_Arrays.lPlacement[i].Count != 2)
+				{
+					listEdit.Items.Add(Clothing_Arrays.lPlacement[i][0]);
+				}
+				else
+				{
+					listEdit.Items.Add(string.Format("{0} | {1}", Clothing_Arrays.lPlacement[i][0], Clothing_Arrays.lPlacement[i][1]));
+				}
+			}
+			GeneratePreview();
+			previewBox.Text = XDocument.Load(path + "/XMLGeneratorTempData/preview.xml").ToString();
+			listEdit.Text = "";
 		}
 
 		//preview Generator
@@ -629,44 +664,66 @@ namespace LilithsThroneXMLGenerator
 					{
 						xmlDocument.XPathSelectElement("clothing").Add(new XElement("displacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][0])));
 						xmlDocument.XPathSelectElement("clothing").Add(new XElement("replacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][1])));
-						for (int a = 0; a < Clothing_Arrays.lTexts.Count; a++)
-						{
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[a][0])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[a][1])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[a][2])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[a][3])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[a][4])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[a][5])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[a][6])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[a][7])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][0])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][1])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][2])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][3])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][4])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][5])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][6])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][7])));
 
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[a][8])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[a][9])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[a][10])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[a][11])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[a][12])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[a][13])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[a][14])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[a][15])));
-						}
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][8])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][9])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][10])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][11])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][12])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][13])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][14])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][15])));
+						
 					}
 					else if (Clothing_Arrays.lPlacement[i].Count == 1)
 					{
 						xmlDocument.XPathSelectElement("clothing").Add(new XElement("displacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][0])));
-						for (int a = 0; a < Clothing_Arrays.lTexts.Count; a++)
-						{
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[a][0])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[a][1])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[a][2])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[a][3])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[a][4])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[a][5])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[a][6])));
-							xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[a][7])));
-						}
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][0])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][1])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][2])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][3])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][4])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][5])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][6])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][7])));
+						
+					}
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList").Add(new XElement("blockedParts"));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("displacementType", Clothing_Arrays.lPlacement[i][0]));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("clothingAccessRequired"));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("blockedBodyParts"));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("clothingAccessBlocked"));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("concealedSlots"));
+					for (int a = 0; a < Clothing_Arrays.lclothingAccessRequired[i].Count; a++)
+					{
+						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/clothingAccessRequired").Add(new XElement("clothingAccess", Clothing_Arrays.lclothingAccessRequired[i][a]));
+					}
+					for (int a = 0; a < Clothing_Arrays.lclothingAccessBlocked[i].Count; a++)
+					{
+						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/clothingAccessBlocked").Add(new XElement("clothingAccess", Clothing_Arrays.lclothingAccessBlocked[i][a]));
+					}
+					for (int a = 0; a < Clothing_Arrays.lblockedBodyParts[i].Count; a++)
+					{
+						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/blockedBodyParts").Add(new XElement("bodyPart", Clothing_Arrays.lblockedBodyParts[i][a]));
+					}
+					for (int a = 0; a < Clothing_Arrays.lconcealedSlots[i].Count; a++)
+					{
+						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/concealedSlots").Add(new XElement("slot", Clothing_Arrays.lconcealedSlots[i][a]));
 					}
 				}
 			}
+
+
+
+
 			//save
 			XmlWriterSettings settings = new XmlWriterSettings
 			{

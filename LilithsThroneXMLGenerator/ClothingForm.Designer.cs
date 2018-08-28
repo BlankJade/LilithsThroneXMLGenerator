@@ -169,6 +169,9 @@
 			this.textBox9 = new System.Windows.Forms.TextBox();
 			this.groupBox12 = new System.Windows.Forms.GroupBox();
 			this.previewBox = new System.Windows.Forms.TextBox();
+			this.button8 = new System.Windows.Forms.Button();
+			this.listEdit = new System.Windows.Forms.ComboBox();
+			this.label21 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.attributes.SuspendLayout();
 			this.tut1.SuspendLayout();
@@ -1640,6 +1643,9 @@
 			// 
 			// prevsav
 			// 
+			this.prevsav.Controls.Add(this.label21);
+			this.prevsav.Controls.Add(this.listEdit);
+			this.prevsav.Controls.Add(this.button8);
 			this.prevsav.Controls.Add(this.button4);
 			this.prevsav.Controls.Add(this.groupBox13);
 			this.prevsav.Controls.Add(this.groupBox12);
@@ -1702,6 +1708,33 @@
 			this.previewBox.Size = new System.Drawing.Size(647, 673);
 			this.previewBox.TabIndex = 0;
 			// 
+			// button8
+			// 
+			this.button8.Location = new System.Drawing.Point(861, 517);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(102, 23);
+			this.button8.TabIndex = 8;
+			this.button8.Text = "Delete selected";
+			this.button8.UseVisualStyleBackColor = true;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
+			// 
+			// listEdit
+			// 
+			this.listEdit.FormattingEnabled = true;
+			this.listEdit.Location = new System.Drawing.Point(664, 517);
+			this.listEdit.Name = "listEdit";
+			this.listEdit.Size = new System.Drawing.Size(191, 21);
+			this.listEdit.TabIndex = 9;
+			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.Location = new System.Drawing.Point(664, 501);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(157, 13);
+			this.label21.TabIndex = 10;
+			this.label21.Text = "Select a Displacement to delete";
+			// 
 			// ClothingForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1756,6 +1789,7 @@
 			this.addDispl.ResumeLayout(false);
 			this.addDispl.PerformLayout();
 			this.prevsav.ResumeLayout(false);
+			this.prevsav.PerformLayout();
 			this.groupBox13.ResumeLayout(false);
 			this.groupBox13.PerformLayout();
 			this.groupBox12.ResumeLayout(false);
@@ -1905,5 +1939,8 @@
 		public System.Windows.Forms.TabControl tabControl1;
 		public System.Windows.Forms.TabControl tabControl2;
 		public System.Windows.Forms.TabPage addDispl;
+		private System.Windows.Forms.Button button8;
+		private System.Windows.Forms.ComboBox listEdit;
+		private System.Windows.Forms.Label label21;
 	}
 }

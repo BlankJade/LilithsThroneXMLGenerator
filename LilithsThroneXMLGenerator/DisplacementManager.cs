@@ -1,12 +1,17 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using System.Xml.XPath;
+using System.Xml;
+using System.Xml.Schema;
 
 namespace LilithsThroneXMLGenerator
 {
@@ -15,7 +20,27 @@ namespace LilithsThroneXMLGenerator
 		public DisplacementManager()
 		{
 			InitializeComponent();
+			onload();
 		}
+		public static string path = Directory.GetCurrentDirectory();
+		XDocument data = XDocument.Load(path + "/DataSources/Data.xml");
+		private void onload()
+		{
+			foreach (XElement element in data.Descendants("bp"))
+			{
+				bbpBox1.Items.Add(element.Value);
+			}
+			foreach (XElement element in data.Descendants("cl"))
+			{
+				cabBox1.Items.Add(element.Value);
+				carBox1.Items.Add(element.Value);
+			}
+			foreach (XElement element in data.Descendants("slot"))
+			{
+				csBox1.Items.Add(element.Value);
+			}
+		}
+
 		private static List<string> tempclothingAccessRequired = new List<string>();
 		private static List<string> tempclothingAccessBlocked = new List<string>();
 		private static List<string> tempconcealedSlots = new List<string>();
@@ -23,11 +48,12 @@ namespace LilithsThroneXMLGenerator
 		private static List<string> tempPlacement = new List<string>();
 		private static List<string> tempText = new List<string>();
 
-		public event EventHandler saveclick
+		public event EventHandler saveclick;
+		public void raisesaveclick()
 		{
-			add { button1.Click += value; }
-			remove { button1.Click -= value; }
+			saveclick?.Invoke(this, new EventArgs());
 		}
+
 
 		private void button1_Click(object sender, EventArgs e)
 		{
@@ -107,6 +133,13 @@ namespace LilithsThroneXMLGenerator
 																					Clothing_Arrays.lblockedBodyParts.Add(new List<string>(tempblockedBodyParts));
 																					Clothing_Arrays.lconcealedSlots.Add(new List<string>(tempconcealedSlots));
 																					Clothing_Arrays.lTexts.Add(new List<string>(tempText));
+																					tempclothingAccessBlocked.Clear();
+																					tempclothingAccessRequired.Clear();
+																					tempconcealedSlots.Clear();
+																					tempPlacement.Clear();
+																					tempText.Clear();
+																					tempblockedBodyParts.Clear();
+																					raisesaveclick();
 																				}
 																				else
 																				{
@@ -181,6 +214,13 @@ namespace LilithsThroneXMLGenerator
 													Clothing_Arrays.lblockedBodyParts.Add(new List<string>(tempblockedBodyParts));
 													Clothing_Arrays.lconcealedSlots.Add(new List<string>(tempconcealedSlots));
 													Clothing_Arrays.lTexts.Add(new List<string>(tempText));
+													tempclothingAccessBlocked.Clear();
+													tempclothingAccessRequired.Clear();
+													tempconcealedSlots.Clear();
+													tempPlacement.Clear();
+													tempText.Clear();
+													tempblockedBodyParts.Clear();
+													raisesaveclick();
 												}
 											}
 											else

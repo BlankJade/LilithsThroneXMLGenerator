@@ -83,7 +83,7 @@
 			this.MinimumSize = new System.Drawing.Size(300, 200);
 			this.Name = "Chooser";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "LTXMLGen";
+			this.Text = "LTXMLGen v3.5-beta.1";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

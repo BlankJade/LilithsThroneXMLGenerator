@@ -1759,7 +1759,7 @@
 			this.MinimumSize = new System.Drawing.Size(400, 400);
 			this.Name = "ClothingForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Clothing Mod XMLGen v3.1";
+			this.Text = "Clothing Mod XMLGen";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClothingForm_FormClosing);
 			this.tabControl1.ResumeLayout(false);
 			this.attributes.ResumeLayout(false);

@@ -422,7 +422,12 @@ namespace LilithsThroneXMLGenerator
 				{
 					try
 					{
-						System.IO.File.Copy(path + "/XMLGeneratorTempData/previewweapon.xml", saveFileDialog1.FileName);
+						if (Directory.Exists(path + "/XMLGeneratorTempData") == false)
+						{
+							Directory.CreateDirectory(path + "/XMLGeneratorTempData");
+							GeneratePreview();
+						}
+						File.Copy(path + "/XMLGeneratorTempData/previewweapon.xml", saveFileDialog1.FileName);
 					}
 					catch (Exception ex)
 					{

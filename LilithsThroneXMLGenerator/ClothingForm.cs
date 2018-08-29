@@ -878,6 +878,11 @@ namespace LilithsThroneXMLGenerator
 				{
 					try
 					{
+						if (Directory.Exists(path + "/XMLGeneratorTempData") == false)
+						{
+							Directory.CreateDirectory(path + "/XMLGeneratorTempData");
+							GeneratePreview();
+						}
 						System.IO.File.Copy(path + "/XMLGeneratorTempData/preview.xml", saveFileDialog1.FileName);
 					}
 					catch (Exception ex)

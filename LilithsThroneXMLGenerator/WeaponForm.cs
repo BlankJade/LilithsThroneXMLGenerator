@@ -409,9 +409,37 @@ namespace LilithsThroneXMLGenerator
 				previewBox.Text = XDocument.Load(path + "/XMLGeneratorTempData/previewweapon.xml").ToString();
 			}
 		}
+		private void button8_Click(object sender, EventArgs e)
+		{
+			SaveFileDialog saveFileDialog1 = new SaveFileDialog
+			{
+				Filter = "XML Document|*.xml",
+				Title = "Save your XML to..."
+			};
+			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+			{
+				if (saveFileDialog1.FileName != "")
+				{
+					try
+					{
+						System.IO.File.Copy(path + "/XMLGeneratorTempData/previewweapon.xml", saveFileDialog1.FileName);
+					}
+					catch (Exception ex)
+					{
+						MessageBox.Show(ex.Message);
+					}
+				}
+				else
+				{
+					MessageBox.Show("You forgot to set a filename");
+				}
+			}
+		}
 		private void WeaponForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Directory.Delete(path + "/XMLGeneratorTempData", true);
 		}
+
+		
 	}
 }

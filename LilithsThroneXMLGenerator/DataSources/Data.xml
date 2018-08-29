@@ -355,7 +355,6 @@
 			<damageType>FIRE</damageType>
 			<damageType>ICE</damageType>
 			<damageType>LUST</damageType>
-			<damageType>MISC</damageType>
 			<damageType>PHYSICAL</damageType>
 			<damageType>POISON</damageType>
 		</damageTypes>

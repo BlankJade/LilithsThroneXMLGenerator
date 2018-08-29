@@ -61,6 +61,7 @@ namespace LilithsThroneXMLGenerator
 				sec.Items.Add(element.Value);
 				secd.Items.Add(element.Value);
 			}
+			Directory.CreateDirectory(path + "/XMLGeneratorTempData");
 
 		}
 		private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -407,6 +408,10 @@ namespace LilithsThroneXMLGenerator
 				GeneratePreview();
 				previewBox.Text = XDocument.Load(path + "/XMLGeneratorTempData/previewweapon.xml").ToString();
 			}
+		}
+		private void WeaponForm_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Directory.Delete(path + "/XMLGeneratorTempData", true);
 		}
 	}
 }

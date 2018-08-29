@@ -1287,6 +1287,7 @@
 			this.MinimumSize = new System.Drawing.Size(400, 400);
 			this.Name = "WeaponForm";
 			this.Text = "WeaponForm";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WeaponForm_FormClosing);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage1.PerformLayout();

@@ -443,6 +443,9 @@ namespace LilithsThroneXMLGenerator
 		private void WeaponForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Directory.Delete(path + "/XMLGeneratorTempData", true);
+			Hide();
+			Chooser chooser = new Chooser();
+			chooser.ShowDialog();
 		}
 
 		

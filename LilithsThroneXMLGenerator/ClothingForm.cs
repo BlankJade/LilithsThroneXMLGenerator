@@ -996,6 +996,9 @@ namespace LilithsThroneXMLGenerator
 		private void ClothingForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Directory.Delete(path + "/XMLGeneratorTempData", true);
+			Hide();
+			Chooser chooser = new Chooser();
+			chooser.ShowDialog();
 		}
 
 		

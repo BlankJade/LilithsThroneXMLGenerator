@@ -164,14 +164,14 @@
 			this.button5 = new System.Windows.Forms.Button();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.prevsav = new System.Windows.Forms.TabPage();
+			this.label21 = new System.Windows.Forms.Label();
+			this.listEdit = new System.Windows.Forms.ComboBox();
+			this.button8 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.groupBox13 = new System.Windows.Forms.GroupBox();
 			this.textBox9 = new System.Windows.Forms.TextBox();
 			this.groupBox12 = new System.Windows.Forms.GroupBox();
 			this.previewBox = new System.Windows.Forms.TextBox();
-			this.button8 = new System.Windows.Forms.Button();
-			this.listEdit = new System.Windows.Forms.ComboBox();
-			this.label21 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.attributes.SuspendLayout();
 			this.tut1.SuspendLayout();
@@ -285,14 +285,17 @@
 			// 
 			// comboBox9
 			// 
+			this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox9.FormattingEnabled = true;
 			this.comboBox9.Location = new System.Drawing.Point(575, 22);
 			this.comboBox9.Name = "comboBox9";
 			this.comboBox9.Size = new System.Drawing.Size(176, 21);
 			this.comboBox9.TabIndex = 8;
+			this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
 			// 
 			// comboBox8
 			// 
+			this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox8.FormattingEnabled = true;
 			this.comboBox8.Items.AddRange(new object[] {
             "CLOTHING_ATTRIBUTE",
@@ -322,6 +325,7 @@
 			// 
 			// comboBox7
 			// 
+			this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox7.FormattingEnabled = true;
 			this.comboBox7.Items.AddRange(new object[] {
             "MAJOR_BOOST",
@@ -337,13 +341,13 @@
 			// 
 			// comboBox6
 			// 
+			this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox6.Enabled = false;
 			this.comboBox6.FormattingEnabled = true;
 			this.comboBox6.Location = new System.Drawing.Point(47, 21);
 			this.comboBox6.Name = "comboBox6";
 			this.comboBox6.Size = new System.Drawing.Size(116, 21);
 			this.comboBox6.TabIndex = 4;
-			this.comboBox6.Text = "CLOTHING";
 			// 
 			// button3
 			// 
@@ -567,6 +571,7 @@
 			// 
 			// comboBox5
 			// 
+			this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox5.FormattingEnabled = true;
 			this.comboBox5.Items.AddRange(new object[] {
             ""});
@@ -588,6 +593,7 @@
 			// 
 			// comboBox4
 			// 
+			this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox4.FormattingEnabled = true;
 			this.comboBox4.Items.AddRange(new object[] {
             "COMMON",
@@ -613,6 +619,7 @@
 			// 
 			// comboBox3
 			// 
+			this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox3.FormattingEnabled = true;
 			this.comboBox3.Location = new System.Drawing.Point(6, 229);
 			this.comboBox3.MinimumSize = new System.Drawing.Size(120, 0);
@@ -632,6 +639,7 @@
 			// 
 			// comboBox2
 			// 
+			this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox2.FormattingEnabled = true;
 			this.comboBox2.Items.AddRange(new object[] {
             "ANDROGYNOUS",
@@ -754,6 +762,7 @@
 			// 
 			// comboBox1
 			// 
+			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox1.FormattingEnabled = true;
 			this.comboBox1.Items.AddRange(new object[] {
             "a",
@@ -899,12 +908,12 @@
 			// 
 			// comboBox15
 			// 
+			this.comboBox15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox15.FormattingEnabled = true;
 			this.comboBox15.Location = new System.Drawing.Point(6, 20);
 			this.comboBox15.Name = "comboBox15";
 			this.comboBox15.Size = new System.Drawing.Size(121, 21);
 			this.comboBox15.TabIndex = 6;
-			this.comboBox15.Text = "NONE";
 			this.comboBox15.SelectedIndexChanged += new System.EventHandler(this.comboBox15_SelectedIndexChanged);
 			// 
 			// colour6
@@ -932,12 +941,12 @@
 			// 
 			// comboBox14
 			// 
+			this.comboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox14.FormattingEnabled = true;
 			this.comboBox14.Location = new System.Drawing.Point(6, 19);
 			this.comboBox14.Name = "comboBox14";
 			this.comboBox14.Size = new System.Drawing.Size(121, 21);
 			this.comboBox14.TabIndex = 5;
-			this.comboBox14.Text = "NONE";
 			this.comboBox14.SelectedIndexChanged += new System.EventHandler(this.comboBox14_SelectedIndexChanged);
 			// 
 			// colour5
@@ -965,12 +974,12 @@
 			// 
 			// comboBox13
 			// 
+			this.comboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox13.FormattingEnabled = true;
 			this.comboBox13.Location = new System.Drawing.Point(6, 20);
 			this.comboBox13.Name = "comboBox13";
 			this.comboBox13.Size = new System.Drawing.Size(121, 21);
 			this.comboBox13.TabIndex = 4;
-			this.comboBox13.Text = "NONE";
 			this.comboBox13.SelectedIndexChanged += new System.EventHandler(this.comboBox13_SelectedIndexChanged);
 			// 
 			// colour4
@@ -998,12 +1007,12 @@
 			// 
 			// comboBox12
 			// 
+			this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox12.FormattingEnabled = true;
 			this.comboBox12.Location = new System.Drawing.Point(6, 20);
 			this.comboBox12.Name = "comboBox12";
 			this.comboBox12.Size = new System.Drawing.Size(121, 21);
 			this.comboBox12.TabIndex = 3;
-			this.comboBox12.Text = "NONE";
 			this.comboBox12.SelectedIndexChanged += new System.EventHandler(this.comboBox12_SelectedIndexChanged);
 			// 
 			// colour3
@@ -1031,12 +1040,12 @@
 			// 
 			// comboBox11
 			// 
+			this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox11.FormattingEnabled = true;
 			this.comboBox11.Location = new System.Drawing.Point(6, 20);
 			this.comboBox11.Name = "comboBox11";
 			this.comboBox11.Size = new System.Drawing.Size(121, 21);
 			this.comboBox11.TabIndex = 2;
-			this.comboBox11.Text = "NONE";
 			this.comboBox11.SelectedIndexChanged += new System.EventHandler(this.comboBox11_SelectedIndexChanged);
 			// 
 			// colour2
@@ -1074,12 +1083,12 @@
 			// 
 			// comboBox10
 			// 
+			this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox10.FormattingEnabled = true;
 			this.comboBox10.Location = new System.Drawing.Point(6, 19);
 			this.comboBox10.Name = "comboBox10";
 			this.comboBox10.Size = new System.Drawing.Size(121, 21);
 			this.comboBox10.TabIndex = 0;
-			this.comboBox10.Text = "NONE";
 			this.comboBox10.SelectedIndexChanged += new System.EventHandler(this.comboBox10_SelectedIndexChanged);
 			// 
 			// RemoveEquip
@@ -1656,6 +1665,34 @@
 			this.prevsav.Text = "Preview&Saving";
 			this.prevsav.UseVisualStyleBackColor = true;
 			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.Location = new System.Drawing.Point(664, 501);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(157, 13);
+			this.label21.TabIndex = 10;
+			this.label21.Text = "Select a Displacement to delete";
+			// 
+			// listEdit
+			// 
+			this.listEdit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.listEdit.FormattingEnabled = true;
+			this.listEdit.Location = new System.Drawing.Point(664, 517);
+			this.listEdit.Name = "listEdit";
+			this.listEdit.Size = new System.Drawing.Size(191, 21);
+			this.listEdit.TabIndex = 9;
+			// 
+			// button8
+			// 
+			this.button8.Location = new System.Drawing.Point(861, 517);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(102, 23);
+			this.button8.TabIndex = 8;
+			this.button8.Text = "Delete selected";
+			this.button8.UseVisualStyleBackColor = true;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
+			// 
 			// button4
 			// 
 			this.button4.Location = new System.Drawing.Point(670, 428);
@@ -1707,33 +1744,6 @@
 			this.previewBox.Name = "previewBox";
 			this.previewBox.Size = new System.Drawing.Size(647, 673);
 			this.previewBox.TabIndex = 0;
-			// 
-			// button8
-			// 
-			this.button8.Location = new System.Drawing.Point(861, 517);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(102, 23);
-			this.button8.TabIndex = 8;
-			this.button8.Text = "Delete selected";
-			this.button8.UseVisualStyleBackColor = true;
-			this.button8.Click += new System.EventHandler(this.button8_Click);
-			// 
-			// listEdit
-			// 
-			this.listEdit.FormattingEnabled = true;
-			this.listEdit.Location = new System.Drawing.Point(664, 517);
-			this.listEdit.Name = "listEdit";
-			this.listEdit.Size = new System.Drawing.Size(191, 21);
-			this.listEdit.TabIndex = 9;
-			// 
-			// label21
-			// 
-			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(664, 501);
-			this.label21.Name = "label21";
-			this.label21.Size = new System.Drawing.Size(157, 13);
-			this.label21.TabIndex = 10;
-			this.label21.Text = "Select a Displacement to delete";
 			// 
 			// ClothingForm
 			// 

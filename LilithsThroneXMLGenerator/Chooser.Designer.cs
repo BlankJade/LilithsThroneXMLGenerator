@@ -38,26 +38,27 @@
 			// 
 			this.textBox1.Enabled = false;
 			this.textBox1.Location = new System.Drawing.Point(12, 12);
+			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
-			this.textBox1.Size = new System.Drawing.Size(260, 20);
+			this.textBox1.Size = new System.Drawing.Size(260, 33);
 			this.textBox1.TabIndex = 0;
-			this.textBox1.Text = "Create new Mod";
+			this.textBox1.Text = "Create new Mod\r\nChoose a mod Type";
 			this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// modChooser
 			// 
+			this.modChooser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.modChooser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.modChooser.FormattingEnabled = true;
 			this.modChooser.Items.AddRange(new object[] {
             "Clothing",
             "Weapon",
             "Tattoo"});
-			this.modChooser.Location = new System.Drawing.Point(12, 38);
+			this.modChooser.Location = new System.Drawing.Point(12, 51);
 			this.modChooser.Name = "modChooser";
 			this.modChooser.Size = new System.Drawing.Size(260, 21);
 			this.modChooser.TabIndex = 1;
-			this.modChooser.Text = "Mod type...";
 			// 
 			// button1
 			// 

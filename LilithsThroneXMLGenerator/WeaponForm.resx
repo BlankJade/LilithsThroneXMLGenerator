@@ -117,12 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox7.Text" xml:space="preserve">
-    <value>For the Core Attributes it is mostly self-explanatory. Determiner stands for the A or AN infront of the word.
-Ex: an Apple, a Shirt, a pair of Socks, etc.
+  <data name="textBox8.Text" xml:space="preserve">
+    <value>Most things explain themselves.
 
-Custom Clothing Sets are currently not possible but you can add to existing ones.
-Equipped Image Name is currently only used by condoms for clothing. Essentially its a different SVG for when the Item is equipped.
+Melee: Is it a melee weapon? Setting this to false makes the weapon ranged.
+
+Twohanded: As the name implies, setting this to true makes the weapon twohanded.
+
+Determiner: a Sword, an Arc-Caster of Doom, a pair of Tantos. Custom means you can set a custom determiner.
+
+Attack Descriptor: A single verb that stands for the attack. Dagger = stab. Bow = shoot. BFG = exterminate. Simple as that.
+
+Arcane Cost: How much Arcane Power is consumed with each attack. Cant shoot that juicy BFG when you have no juice left.
+
+Damage Variance: Base Damage of the Weapon. NONE = Newspaper, HIGH = 1/10 of a BFG (may or may not be true).
+
+Spell: Aye if ya can not figure this out yourself you probably will not be able to complete the SECRET step.
+
 _______________________________________________________________
 
 The Enchanting only works when you set a custom Enchantment Limit. LT can either handle the Limit dynamically or you can set it here.
@@ -148,40 +159,16 @@ You do not need to worry about what can be selected as you can only select thing
   <metadata name="timer.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="textBox8.Text" xml:space="preserve">
-    <value>The section for colouration works as follows:
-
-You either choose a colour typset from the dropdown menus for colouration and dyes or you set them to CUSTOM and pick the aviable colours and dyes by hand.
-
-_________________________________________________
-
-Item tags are pretty much self-explaining.
-
-_________________________________________________
-
-Incompatible Slots are like this: 
-
-A onepiece Swimsuit is equipped in the CHEST slot but due to its nature it also blocks the STOMACH and GROIN.</value>
-  </data>
-  <data name="textBox17.Text" xml:space="preserve">
-    <value>Here you can Input your displacement texts. You do not need to care for any technical terms like CDATA since that is handled by the program
-It is advised to write the text in another program and just copy paste it into here.
-
-You do however need to input things like:
-(Do note, that npc is freely exchangeable with player. Capitalisation is done by writing Npc instead of npc. Verbs are handled by npc.verb(verb))
-
-- [npc.name]
-- [npc.her]
-- [npc.she]
-- [npc.arms]
-- [npc1.name]
-- [npc1.her]
-- [npc1.she]
-- [npc1.arms]
-- [npc2.arms]
-- etc.</value>
-  </data>
   <data name="textBox9.Text" xml:space="preserve">
+    <value>Aviable Damage Types: With wich damage types can this weapon spawn? A non-magical weapon would likely not have any elemental damage type.
+
+Item Tags: Read them. You'll understand.
+
+Colours: I assume you are familiar with those if you are creating a mod. How'd you even get the .svg if not?
+
+Texts: You can add as many Hit and Miss Texts as you want. The game picks one at random for each attack. The Attack Tooltip is for when you hover over the Attack Button in a fight. All of them support (and encourage, I'd say even demand) [npc.her]dressing, [npc.verb(verb)] verb modification and all the other shenanigans.</value>
+  </data>
+  <data name="textBox15.Text" xml:space="preserve">
     <value>This is a preview for your XML file.
 Due to some technical stuff it is not exactly displayed as it is if you would read it in Notepad++.
 

@@ -25,7 +25,7 @@ namespace LilithsThroneXMLGenerator
 		}
 		public static string path = Directory.GetCurrentDirectory();
 		XDocument data = XDocument.Load(path + "/DataSources/Data.xml");
-		public int Enchantments = 0;
+		private int Enchantments = 0;
 
 		//code
 		public void onload()
@@ -74,6 +74,514 @@ namespace LilithsThroneXMLGenerator
 			Directory.CreateDirectory(path + "/XMLGeneratorTempData");
 			previewBox.ScrollBars = ScrollBars.Vertical;
 		}
+		public void checkLimit()
+		{
+			if (comboBox9.Text == "TF_MOD_SIZE")
+			{
+				if (comboBox8.Text == "TF_FACE")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 4;
+				}
+				else if (comboBox8.Text == "TF_CORE")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 244;
+				}
+				else if (comboBox8.Text == "TF_HAIR")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 140;
+				}
+				else if (comboBox8.Text == "TF_ASS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_BREASTS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 91;
+				}
+				else if (comboBox8.Text == "TF_PENIS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 40;
+				}
+				else if (comboBox8.Text == "TF_VAGINA")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 50;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+
+			}
+			if (comboBox9.Text == "TF_MOD_SIZE_SECONDARY")
+			{
+				if (comboBox8.Text == "TF_CORE")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 100;
+				}
+				else if (comboBox8.Text == "TF_ASS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_BREASTS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 4;
+				}
+				else if (comboBox8.Text == "TF_PENIS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_VAGINA")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 4;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+			if (comboBox9.Text == "TF_MOD_SIZE_TERTIARY")
+			{
+				if (comboBox8.Text == "TF_CORE")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 100;
+				}
+				else if (comboBox8.Text == "TF_BREASTS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 4;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+			if (comboBox9.Text == "TF_MOD_CAPACITY")
+			{
+				if (comboBox8.Text == "TF_ASS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 40;
+				}
+				else if (comboBox8.Text == "TF_BREASTS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 40;
+				}
+				else if (comboBox8.Text == "TF_PENIS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 40;
+				}
+				else if (comboBox8.Text == "TF_VAGINA")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 40;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+			if (comboBox9.Text == "TF_MOD_ELASTICITY")
+			{
+				if (comboBox8.Text == "TF_ASS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_BREASTS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_PENIS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_VAGINA")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+			if (comboBox9.Text == "TF_MOD_PLASTICITY")
+			{
+				if (comboBox8.Text == "TF_ASS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_BREASTS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_PENIS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_VAGINA")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+			if (comboBox9.Text == "TF_MOD_WETNESS")
+			{
+				if (comboBox8.Text == "TF_ASS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_BREASTS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else if (comboBox8.Text == "TF_PENIS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 10000;
+				}
+				else if (comboBox8.Text == "TF_VAGINA")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 7;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+			if (comboBox9.Text == "TF_MOD_CUM_EXPULSION")
+			{
+				if (comboBox8.Text == "TF_PENIS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 100;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+			if (comboBox9.Text == "TF_MOD_REGENERATION")
+			{
+				if (comboBox8.Text == "TF_BREASTS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 4;
+				}
+				else if (comboBox8.Text == "TF_PENIS")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 4;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+			if (comboBox9.Text == "TF_MOD_FEMININITY")
+			{
+				if (comboBox8.Text == "TF_CORE")
+				{
+					numericUpDown4.Enabled = true;
+					numericUpDown4.Maximum = 100;
+				}
+				else
+				{
+					numericUpDown4.Enabled = false;
+				}
+			}
+		}
+		//preview Generator
+		private string determiner;
+		private string plural;
+		private string enchantment;
+		void Replacements()
+		{
+			if (comboBox1.Text == "CUSTOM")
+			{
+				determiner = textBox1.Text;
+			}
+			if (comboBox1.Text != "CUSTOM")
+			{
+				determiner = comboBox1.Text;
+			}
+			if (checkBox1.Checked == true)
+			{
+				plural = "true";
+			}
+			if (checkBox1.Checked == false)
+			{
+				plural = "false";
+			}
+			if (numericUpDown3.Value == 0)
+			{
+				enchantment = "";
+			}
+			if (numericUpDown3.Value != 0)
+			{
+				enchantment = numericUpDown3.Value.ToString();
+			}
+		}
+		private void GeneratePreview()
+		{
+
+			Replacements();
+			XDocument xmlDocument = new XDocument(
+					new XDeclaration("1.0", "utf-8", "no"),
+						new XElement("clothing",
+							new XElement("coreAtributes",
+								new XElement("value", numericUpDown1.Value),
+								new XElement("determiner", new XCData(determiner.ToString())),
+								new XElement("name", new XCData(textBox2.Text)),
+								new XElement("namePlural", new XAttribute("pluralByDefault", plural.ToString()), new XCData(textBox3.Text)),
+								new XElement("description", new XCData(textBox4.Text)),
+								new XElement("physicalResistance", numericUpDown2.Value),
+								new XElement("femininity", comboBox2.Text),
+								new XElement("slot", comboBox3.Text),
+								new XElement("rarity", comboBox4.Text),
+								new XElement("clothingSet", comboBox5.Text),
+								new XElement("imageName", textBox5.Text),
+								new XElement("imageEquippedName", textBox6.Text),
+								new XElement("enchantmentLimit", enchantment.ToString()),
+								new XElement("effects"),
+								new XElement("blockedPartsList",
+									new XElement("blockedParts",
+										new XElement("displacementType", "REMOVE_OR_EQUIP"),
+										new XElement("clothingAccessRequired"),
+										new XElement("blockedBodyParts"),
+										new XElement("clothingAccessBlocked"),
+										new XElement("concealedSlots"))),
+								new XElement("incompatibleSlots"),
+								new XElement("primaryColours"),
+								new XElement("primaryColoursDye"),
+								new XElement("secondaryColours"),
+								new XElement("secondaryColoursDye"),
+								new XElement("tertiaryColours"),
+								new XElement("tertiaryColoursDye"),
+								new XElement("itemTags")),
+							new XElement("displacementText", new XAttribute("type", "REMOVE_OR_EQUIP"),
+								new XElement("playerSelf", new XCData(dText1.Text)),
+								new XElement("playerNPC", new XCData(dText2.Text)),
+								new XElement("playerNPCRough", new XCData(dText3.Text)),
+								new XElement("NPCSelf", new XCData(dText4.Text)),
+								new XElement("NPCPlayer", new XCData(dText5.Text)),
+								new XElement("NPCPlayerRough", new XCData(dText6.Text)),
+								new XElement("NPCOtherNPC", new XCData(dText7.Text)),
+								new XElement("NPCOtherNPCRough", new XCData(dText8.Text))),
+							new XElement("replacementText", new XAttribute("type", "REMOVE_OR_EQUIP"),
+								new XElement("playerSelf", new XCData(rText1.Text)),
+								new XElement("playerNPC", new XCData(rText2.Text)),
+								new XElement("playerNPCRough", new XCData(rText3.Text)),
+								new XElement("NPCSelf", new XCData(rText4.Text)),
+								new XElement("NPCPlayer", new XCData(rText5.Text)),
+								new XElement("NPCPlayerRough", new XCData(rText6.Text)),
+								new XElement("NPCOtherNPC", new XCData(rText7.Text)),
+								new XElement("NPCOtherNPCRough", new XCData(rText8.Text)))));
+			//Add in more data
+			for (int i = 0; i < dataGridView1.Rows.Count; i++)
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/effects").Add(new XElement("effect", new XAttribute("itemEffectType", dataGridView1.Rows[i].Cells[0].Value.ToString()), new XAttribute("limit", dataGridView1.Rows[i].Cells[1].Value.ToString()), new XAttribute("potency", dataGridView1.Rows[i].Cells[2].Value.ToString()), new XAttribute("primaryModifier", dataGridView1.Rows[i].Cells[3].Value.ToString()), new XAttribute("secondaryModifier", dataGridView1.Rows[i].Cells[4].Value.ToString()), new XAttribute("timer", dataGridView1.Rows[i].Cells[5].Value.ToString())));
+			}
+			foreach (var item in carBox1.CheckedItems)
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[1]/clothingAccessRequired").Add(new XElement("clothingAccess", item.ToString()));
+			}
+			foreach (var item in cabBox1.CheckedItems)
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[1]/clothingAccessBlocked").Add(new XElement("clothingAccess", item.ToString()));
+			}
+			foreach (var item in csBox1.CheckedItems)
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[1]/concealedSlots").Add(new XElement("slot", item.ToString()));
+			}
+			foreach (var item in bbpBox1.CheckedItems)
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[1]/blockedBodyParts").Add(new XElement("bodyPart", item.ToString()));
+			}
+			foreach (var item in incSlots.CheckedItems)
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/incompatibleSlots").Add(new XElement("slot", item.ToString()));
+			}
+			foreach (var item in itemTags.CheckedItems)
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/itemTags").Add(new XElement("tag", item.ToString()));
+			}
+			if (comboBox10.Text == "CUSTOM")
+			{
+				foreach (var item in colour1.CheckedItems)
+				{
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/primaryColours").Add(new XElement("colour", item.ToString()));
+				}
+			}
+			else
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/primaryColours").Add(new XAttribute("values", comboBox10.Text));
+			}
+			if (comboBox11.Text == "CUSTOM")
+			{
+				foreach (var item in colour2.CheckedItems)
+				{
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/primaryColoursDye").Add(new XElement("colour", item.ToString()));
+				}
+			}
+			else
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/primaryColoursDye").Add(new XAttribute("values", comboBox11.Text));
+			}
+			if (comboBox12.Text == "CUSTOM")
+			{
+				foreach (var item in colour3.CheckedItems)
+				{
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/secondaryColours").Add(new XElement("colour", item.ToString()));
+				}
+			}
+			else
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/secondaryColours").Add(new XAttribute("values", comboBox12.Text));
+			}
+			if (comboBox13.Text == "CUSTOM")
+			{
+				foreach (var item in colour4.CheckedItems)
+				{
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/secondaryColoursDye").Add(new XElement("colour", item.ToString()));
+				}
+			}
+			else
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/secondaryColoursDye").Add(new XAttribute("values", comboBox13.Text));
+			}
+			if (comboBox14.Text == "CUSTOM")
+			{
+				foreach (var item in colour5.CheckedItems)
+				{
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/tertiaryColours").Add(new XElement("colour", item.ToString()));
+				}
+			}
+			else
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/tertiaryColours").Add(new XAttribute("values", comboBox14.Text));
+			}
+			if (comboBox15.Text == "CUSTOM")
+			{
+				foreach (var item in colour6.CheckedItems)
+				{
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/tertiaryColours").Add(new XElement("colour", item.ToString()));
+				}
+			}
+			else
+			{
+				xmlDocument.XPathSelectElement("clothing/coreAtributes/tertiaryColoursDye").Add(new XAttribute("values", comboBox15.Text));
+			}
+
+			if (Clothing_Arrays.lPlacement.Count != 0)
+			{
+				for (int i = 0; i < Clothing_Arrays.lPlacement.Count; i++)
+				{
+					int ian = 2 + i;
+					if (Clothing_Arrays.lPlacement[i].Count == 2)
+					{
+						xmlDocument.XPathSelectElement("clothing").Add(new XElement("displacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][0])));
+						xmlDocument.XPathSelectElement("clothing").Add(new XElement("replacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][1])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][0])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][1])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][2])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][3])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][4])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][5])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][6])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][7])));
+
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][8])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][9])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][10])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][11])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][12])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][13])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][14])));
+						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][15])));
+
+					}
+					else if (Clothing_Arrays.lPlacement[i].Count == 1)
+					{
+						xmlDocument.XPathSelectElement("clothing").Add(new XElement("displacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][0])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][0])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][1])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][2])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][3])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][4])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][5])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][6])));
+						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][7])));
+
+					}
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList").Add(new XElement("blockedParts"));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("displacementType", Clothing_Arrays.lPlacement[i][0]));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("clothingAccessRequired"));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("blockedBodyParts"));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("clothingAccessBlocked"));
+					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("concealedSlots"));
+					for (int a = 0; a < Clothing_Arrays.lclothingAccessRequired[i].Count; a++)
+					{
+						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/clothingAccessRequired").Add(new XElement("clothingAccess", Clothing_Arrays.lclothingAccessRequired[i][a]));
+					}
+					for (int a = 0; a < Clothing_Arrays.lclothingAccessBlocked[i].Count; a++)
+					{
+						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/clothingAccessBlocked").Add(new XElement("clothingAccess", Clothing_Arrays.lclothingAccessBlocked[i][a]));
+					}
+					for (int a = 0; a < Clothing_Arrays.lblockedBodyParts[i].Count; a++)
+					{
+						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/blockedBodyParts").Add(new XElement("bodyPart", Clothing_Arrays.lblockedBodyParts[i][a]));
+					}
+					for (int a = 0; a < Clothing_Arrays.lconcealedSlots[i].Count; a++)
+					{
+						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/concealedSlots").Add(new XElement("slot", Clothing_Arrays.lconcealedSlots[i][a]));
+					}
+				}
+			}
+
+
+
+
+			//save
+			XmlWriterSettings settings = new XmlWriterSettings
+			{
+				Indent = true,
+				IndentChars = ("\t")
+			};
+			using (XmlWriter writer = XmlTextWriter.Create(path + "/XMLGeneratorTempData/preview.xml", settings))
+			{
+				xmlDocument.Save(writer);
+			}
+
+		}
+		//events
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (comboBox1.Text == "CUSTOM")
@@ -472,270 +980,12 @@ namespace LilithsThroneXMLGenerator
 			previewBox.Text = XDocument.Load(path + "/XMLGeneratorTempData/preview.xml").ToString();
 			listEdit.Text = "";
 		}
-
-		//preview Generator
-		private string determiner;
-		private string plural;
-		private string enchantment;
-		void Replacements()
+		private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (comboBox1.Text == "CUSTOM")
-			{
-				determiner = textBox1.Text;
-			}
-			if (comboBox1.Text != "CUSTOM")
-			{
-				determiner = comboBox1.Text;
-			}
-			if (checkBox1.Checked == true)
-			{
-				plural = "true";
-			}
-			if (checkBox1.Checked == false)
-			{
-				plural = "false";
-			}
-			if (numericUpDown3.Value == 0)
-			{
-				enchantment = "";
-			}
-			if (numericUpDown3.Value != 0)
-			{
-				enchantment = numericUpDown3.Value.ToString();
-			}
+			checkLimit();
 		}
-		private void GeneratePreview()
-		{
 
-			Replacements();
-			XDocument xmlDocument = new XDocument(
-					new XDeclaration("1.0", "utf-8", "no"),
-						new XElement("clothing",
-							new XElement("coreAtributes",
-								new XElement("value", numericUpDown1.Value),
-								new XElement("determiner", new XCData(determiner.ToString())),
-								new XElement("name", new XCData(textBox2.Text)),
-								new XElement("namePlural", new XAttribute("pluralByDefault", plural.ToString()), new XCData(textBox3.Text)),
-								new XElement("description", new XCData(textBox4.Text)),
-								new XElement("physicalResistance", numericUpDown2.Value),
-								new XElement("femininity", comboBox2.Text),
-								new XElement("slot", comboBox3.Text),
-								new XElement("rarity", comboBox4.Text),
-								new XElement("clothingSet", comboBox5.Text),
-								new XElement("imageName", textBox5.Text),
-								new XElement("imageEquippedName", textBox6.Text),
-								new XElement("enchantmentLimit", enchantment.ToString()),
-								new XElement("effects"),
-								new XElement("blockedPartsList",
-									new XElement("blockedParts",
-										new XElement("displacementType", "REMOVE_OR_EQUIP"),
-										new XElement("clothingAccessRequired"),
-										new XElement("blockedBodyParts"),
-										new XElement("clothingAccessBlocked"),
-										new XElement("concealedSlots"))),
-								new XElement("incompatibleSlots"),
-								new XElement("primaryColours"),
-								new XElement("primaryColoursDye"),
-								new XElement("secondaryColours"),
-								new XElement("secondaryColoursDye"),
-								new XElement("tertiaryColours"),
-								new XElement("tertiaryColoursDye"),
-								new XElement("itemTags")),
-							new XElement("displacementText", new XAttribute("type", "REMOVE_OR_EQUIP"),
-								new XElement("playerSelf", new XCData(dText1.Text)),
-								new XElement("playerNPC", new XCData(dText2.Text)),
-								new XElement("playerNPCRough", new XCData(dText3.Text)),
-								new XElement("NPCSelf", new XCData(dText4.Text)),
-								new XElement("NPCPlayer", new XCData(dText5.Text)),
-								new XElement("NPCPlayerRough", new XCData(dText6.Text)),
-								new XElement("NPCOtherNPC", new XCData(dText7.Text)),
-								new XElement("NPCOtherNPCRough", new XCData(dText8.Text))),
-							new XElement("replacementText", new XAttribute("type", "REMOVE_OR_EQUIP"),
-								new XElement("playerSelf", new XCData(rText1.Text)),
-								new XElement("playerNPC", new XCData(rText2.Text)),
-								new XElement("playerNPCRough", new XCData(rText3.Text)),
-								new XElement("NPCSelf", new XCData(rText4.Text)),
-								new XElement("NPCPlayer", new XCData(rText5.Text)),
-								new XElement("NPCPlayerRough", new XCData(rText6.Text)),
-								new XElement("NPCOtherNPC", new XCData(rText7.Text)),
-								new XElement("NPCOtherNPCRough", new XCData(rText8.Text)))));
-			//Add in more data
-			for (int i = 0; i < dataGridView1.Rows.Count; i++)
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/effects").Add(new XElement("effect", new XAttribute("itemEffectType", dataGridView1.Rows[i].Cells[0].Value.ToString()), new XAttribute("limit", dataGridView1.Rows[i].Cells[1].Value.ToString()), new XAttribute("potency", dataGridView1.Rows[i].Cells[2].Value.ToString()), new XAttribute("primaryModifier", dataGridView1.Rows[i].Cells[3].Value.ToString()), new XAttribute("secondaryModifier", dataGridView1.Rows[i].Cells[4].Value.ToString()), new XAttribute("timer", dataGridView1.Rows[i].Cells[5].Value.ToString())));
-			}
-			foreach (var item in carBox1.CheckedItems)
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[1]/clothingAccessRequired").Add(new XElement("clothingAccess", item.ToString()));
-			}
-			foreach (var item in cabBox1.CheckedItems)
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[1]/clothingAccessBlocked").Add(new XElement("clothingAccess", item.ToString()));
-			}
-			foreach (var item in csBox1.CheckedItems)
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[1]/concealedSlots").Add(new XElement("slot", item.ToString()));
-			}
-			foreach (var item in bbpBox1.CheckedItems)
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[1]/blockedBodyParts").Add(new XElement("bodyPart", item.ToString()));
-			}
-			foreach (var item in incSlots.CheckedItems)
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/incompatibleSlots").Add(new XElement("slot", item.ToString()));
-			}
-			foreach (var item in itemTags.CheckedItems)
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/itemTags").Add(new XElement("tag", item.ToString()));
-			}
-			if (comboBox10.Text == "CUSTOM")
-			{
-				foreach (var item in colour1.CheckedItems)
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/primaryColours").Add(new XElement("colour", item.ToString()));
-			}
-			}
-			else
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/primaryColours").Add(new XAttribute("values", comboBox10.Text));
-			}
-			if (comboBox11.Text == "CUSTOM")
-			{
-				foreach (var item in colour2.CheckedItems)
-				{
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/primaryColoursDye").Add(new XElement("colour", item.ToString()));
-				}
-			}
-			else
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/primaryColoursDye").Add(new XAttribute("values", comboBox11.Text));
-			}
-			if (comboBox12.Text == "CUSTOM")
-			{
-				foreach (var item in colour3.CheckedItems)
-				{
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/secondaryColours").Add(new XElement("colour", item.ToString()));
-				}
-			}
-			else
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/secondaryColours").Add(new XAttribute("values", comboBox12.Text));
-			}
-			if (comboBox13.Text == "CUSTOM")
-			{
-				foreach (var item in colour4.CheckedItems)
-				{
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/secondaryColoursDye").Add(new XElement("colour", item.ToString()));
-				}
-			}
-			else
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/secondaryColoursDye").Add(new XAttribute("values", comboBox13.Text));
-			}
-			if (comboBox14.Text == "CUSTOM")
-			{
-				foreach (var item in colour5.CheckedItems)
-				{
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/tertiaryColours").Add(new XElement("colour", item.ToString()));
-				}
-			}
-			else
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/tertiaryColours").Add(new XAttribute("values", comboBox14.Text));
-			}
-			if (comboBox15.Text == "CUSTOM")
-			{
-				foreach (var item in colour6.CheckedItems)
-				{
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/tertiaryColours").Add(new XElement("colour", item.ToString()));
-				}
-			}
-			else
-			{
-				xmlDocument.XPathSelectElement("clothing/coreAtributes/tertiaryColoursDye").Add(new XAttribute("values", comboBox15.Text));
-			}
-
-			if(Clothing_Arrays.lPlacement.Count != 0)
-			{
-				for (int i = 0; i < Clothing_Arrays.lPlacement.Count; i++)
-				{
-					int ian = 2 + i;
-					if (Clothing_Arrays.lPlacement[i].Count == 2)
-					{
-						xmlDocument.XPathSelectElement("clothing").Add(new XElement("displacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][0])));
-						xmlDocument.XPathSelectElement("clothing").Add(new XElement("replacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][1])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][0])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][1])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][2])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][3])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][4])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][5])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][6])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[last()]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][7])));
-
-						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][8])));
-						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][9])));
-						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][10])));
-						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][11])));
-						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][12])));
-						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][13])));
-						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][14])));
-						xmlDocument.XPathSelectElement("clothing/replacementText[last()]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][15])));
-						
-					}
-					else if (Clothing_Arrays.lPlacement[i].Count == 1)
-					{
-						xmlDocument.XPathSelectElement("clothing").Add(new XElement("displacementText", new XAttribute("type", Clothing_Arrays.lPlacement[i][0])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerSelf", new XCData(Clothing_Arrays.lTexts[i][0])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPC", new XCData(Clothing_Arrays.lTexts[i][1])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("playerNPCRough", new XCData(Clothing_Arrays.lTexts[i][2])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCSelf", new XCData(Clothing_Arrays.lTexts[i][3])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayer", new XCData(Clothing_Arrays.lTexts[i][4])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCPlayerRough", new XCData(Clothing_Arrays.lTexts[i][5])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPC", new XCData(Clothing_Arrays.lTexts[i][6])));
-						xmlDocument.XPathSelectElement("clothing/displacementText[" + ian + "]").Add(new XElement("NPCOtherNPCRough", new XCData(Clothing_Arrays.lTexts[i][7])));
-						
-					}
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList").Add(new XElement("blockedParts"));
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("displacementType", Clothing_Arrays.lPlacement[i][0]));
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("clothingAccessRequired"));
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("blockedBodyParts"));
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("clothingAccessBlocked"));
-					xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]").Add(new XElement("concealedSlots"));
-					for (int a = 0; a < Clothing_Arrays.lclothingAccessRequired[i].Count; a++)
-					{
-						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/clothingAccessRequired").Add(new XElement("clothingAccess", Clothing_Arrays.lclothingAccessRequired[i][a]));
-					}
-					for (int a = 0; a < Clothing_Arrays.lclothingAccessBlocked[i].Count; a++)
-					{
-						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/clothingAccessBlocked").Add(new XElement("clothingAccess", Clothing_Arrays.lclothingAccessBlocked[i][a]));
-					}
-					for (int a = 0; a < Clothing_Arrays.lblockedBodyParts[i].Count; a++)
-					{
-						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/blockedBodyParts").Add(new XElement("bodyPart", Clothing_Arrays.lblockedBodyParts[i][a]));
-					}
-					for (int a = 0; a < Clothing_Arrays.lconcealedSlots[i].Count; a++)
-					{
-						xmlDocument.XPathSelectElement("clothing/coreAtributes/blockedPartsList/blockedParts[" + ian + "]/concealedSlots").Add(new XElement("slot", Clothing_Arrays.lconcealedSlots[i][a]));
-					}
-				}
-			}
-
-
-
-
-			//save
-			XmlWriterSettings settings = new XmlWriterSettings
-			{
-				Indent = true,
-				IndentChars = ("\t")
-			};
-			using (XmlWriter writer = XmlTextWriter.Create(path + "/XMLGeneratorTempData/preview.xml", settings))
-			{
-				xmlDocument.Save(writer);
-			}
-
-		}
+		
 
 
 		private void ClothingForm_FormClosing(object sender, FormClosingEventArgs e)

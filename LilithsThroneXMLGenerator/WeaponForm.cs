@@ -310,7 +310,7 @@ namespace LilithsThroneXMLGenerator
 								new XElement("damage", numericUpDown2.Value),
 								new XElement("arcaneCost", numericUpDown3.Value),
 								new XElement("damageVariance", comboBox5.Text),
-								new XElement("aviableDamageTypes"),
+								new XElement("availableDamageTypes"),
 								new XElement("spells"),
 								new XElement("enchantmentLimit", enchantment.ToString()),
 								new XElement("effects"),
@@ -328,7 +328,7 @@ namespace LilithsThroneXMLGenerator
 			}
 			foreach (var item in damageTypes.CheckedItems)
 			{
-				xmlDocument.XPathSelectElement("weapon/coreAttributes/aviableDamageTypes").Add(new XElement("damageType", item.ToString()));
+				xmlDocument.XPathSelectElement("weapon/coreAttributes/availableDamageTypes").Add(new XElement("damageType", item.ToString()));
 			}
 			if (prim.Text == "CUSTOM")
 			{

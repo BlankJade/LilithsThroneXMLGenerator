@@ -15,7 +15,7 @@ Hit me up on discord for any form of contribution. I am One (possibly a Dragon)#
 
 ## Authors
 
-* **ONE** - *all the work* - [BlankJade](https://github.com/BlankJade)
+* **ONE/BlankJade** - *all the work* - [BlankJade](https://github.com/BlankJade)
 
 ## Acknowledgments
 

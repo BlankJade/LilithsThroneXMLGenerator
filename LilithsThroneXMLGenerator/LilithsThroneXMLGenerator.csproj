@@ -137,6 +137,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TattooForm.resx">
+      <DependentUpon>TattooForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WeaponForm.resx">
       <DependentUpon>WeaponForm.cs</DependentUpon>
     </EmbeddedResource>

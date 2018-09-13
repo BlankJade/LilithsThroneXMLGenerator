@@ -71,7 +71,6 @@ namespace LilithsThroneXMLGenerator
 				cabBox1.Items.Add(element.Value);
 				carBox1.Items.Add(element.Value);
 			}
-			Directory.CreateDirectory(path + "/XMLGeneratorTempData");
 			previewBox.ScrollBars = ScrollBars.Vertical;
 		}
 		public void checkLimit()
@@ -993,12 +992,10 @@ namespace LilithsThroneXMLGenerator
 		
 
 
-		private void ClothingForm_FormClosing(object sender, FormClosingEventArgs e)
+		public void ClothingForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			Directory.Delete(path + "/XMLGeneratorTempData", true);
 			Hide();
-			Chooser chooser = new Chooser();
-			chooser.ShowDialog();
+			Owner.Show();
 		}
 
 		

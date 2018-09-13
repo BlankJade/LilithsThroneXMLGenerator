@@ -110,6 +110,7 @@ namespace LilithsThroneXMLGenerator
 			{
 				xmlDocument.XPathSelectElement("tattoo/coreAtributes/slotAvailability").Add(new XElement("slot", slot.ToString()));
 			}
+
 			if (apct.Text == "CUSTOM")
 			{
 				foreach (var colour in apc.CheckedItems)
@@ -117,10 +118,11 @@ namespace LilithsThroneXMLGenerator
 					xmlDocument.XPathSelectElement("tattoo/coreAtributes/primaryColours").Add(new XElement("colour", colour.ToString()));
 				}
 			}
-			else
+			else if (apct.Text != "")
 			{
 				xmlDocument.XPathSelectElement("tattoo/coreAtributes/primaryColours").Add(new XAttribute("values", apct.Text));
 			}
+			
 			if (asct.Text == "CUSTOM")
 			{
 				foreach (var colour in asc.CheckedItems)
@@ -128,7 +130,7 @@ namespace LilithsThroneXMLGenerator
 					xmlDocument.XPathSelectElement("tattoo/coreAtributes/secondaryColours").Add(new XElement("colour", colour.ToString()));
 				}
 			}
-			else
+			else if (asct.Text != "")
 			{
 				xmlDocument.XPathSelectElement("tattoo/coreAtributes/secondaryColours").Add(new XAttribute("values", asct.Text));
 			}
@@ -139,7 +141,7 @@ namespace LilithsThroneXMLGenerator
 					xmlDocument.XPathSelectElement("tattoo/coreAtributes/tertiaryColours").Add(new XElement("colour", colour.ToString()));
 				}
 			}
-			else
+			else if (atct.Text != "")
 			{
 				xmlDocument.XPathSelectElement("tattoo/coreAtributes/tertiaryColours").Add(new XAttribute("values", atct.Text));
 			}
@@ -152,6 +154,33 @@ namespace LilithsThroneXMLGenerator
 			using (XmlWriter writer = XmlTextWriter.Create(path + "/XMLGeneratorTempData/previewtattoo.xml", settings))
 			{
 				xmlDocument.Save(writer);
+			}
+			SaveFileDialog saveFileDialog1 = new SaveFileDialog
+			{
+				Filter = "XML Document|*.xml",
+				Title = "Save your XML to..."
+			};
+			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+			{
+				if (saveFileDialog1.FileName != "")
+				{
+					try
+					{
+						if (Directory.Exists(path + "/XMLGeneratorTempData") == false)
+						{
+							Directory.CreateDirectory(path + "/XMLGeneratorTempData");
+						}
+						File.Copy(path + "/XMLGeneratorTempData/previewtattoo.xml", saveFileDialog1.FileName, true);
+					}
+					catch (Exception ex)
+					{
+						MessageBox.Show(ex.Message);
+					}
+				}
+				else
+				{
+					MessageBox.Show("You forgot to set a filename");
+				}
 			}
 		}
 

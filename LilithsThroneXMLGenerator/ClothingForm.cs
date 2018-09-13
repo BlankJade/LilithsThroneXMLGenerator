@@ -882,7 +882,7 @@ namespace LilithsThroneXMLGenerator
 							Directory.CreateDirectory(path + "/XMLGeneratorTempData");
 							GeneratePreview();
 						}
-						System.IO.File.Copy(path + "/XMLGeneratorTempData/preview.xml", saveFileDialog1.FileName);
+						System.IO.File.Copy(path + "/XMLGeneratorTempData/preview.xml", saveFileDialog1.FileName, true);
 					}
 					catch (Exception ex)
 					{

@@ -83,7 +83,7 @@
 			this.MinimumSize = new System.Drawing.Size(300, 200);
 			this.Name = "Chooser";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "LTXMLGen v3.5-beta.1";
+			this.Text = "LTXMLGen v3.7-beta.1";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Chooser_FormClosing);
 			this.ResumeLayout(false);
 			this.PerformLayout();

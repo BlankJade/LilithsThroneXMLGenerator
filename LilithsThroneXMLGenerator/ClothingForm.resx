@@ -117,19 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox7.Text" xml:space="preserve">
-    <value>For the Core Attributes it is mostly self-explanatory. Determiner stands for the A or AN infront of the word.
-Ex: an Apple, a Shirt, a pair of Socks, etc.
-
-Custom Clothing Sets are currently not possible but you can add to existing ones.
-Equipped Image Name is currently only used by condoms for clothing. Essentially its a different SVG for when the Item is equipped.
-_______________________________________________________________
-
-The Enchanting only works when you set a custom Enchantment Limit. LT can either handle the Limit dynamically or you can set it here.
-
-You do not need to worry about what can be selected as you can only select things that are compatible.
-</value>
-  </data>
   <metadata name="itemEffectType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -148,6 +135,19 @@ You do not need to worry about what can be selected as you can only select thing
   <metadata name="timer.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="textBox7.Text" xml:space="preserve">
+    <value>For the Core Attributes it is mostly self-explanatory. Determiner stands for the A or AN infront of the word.
+Ex: an Apple, a Shirt, a pair of Socks, etc.
+
+Custom Clothing Sets are currently not possible but you can add to existing ones.
+Equipped Image Name is currently only used by condoms for clothing. Essentially its a different SVG for when the Item is equipped.
+_______________________________________________________________
+
+The Enchanting only works when you set a custom Enchantment Limit. LT can either handle the Limit dynamically or you can set it here.
+
+You do not need to worry about what can be selected as you can only select things that are compatible.
+</value>
+  </data>
   <metadata name="itemEffectType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

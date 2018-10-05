@@ -39,7 +39,6 @@
 			this.comboBox8 = new System.Windows.Forms.ComboBox();
 			this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
 			this.comboBox7 = new System.Windows.Forms.ComboBox();
-			this.comboBox6 = new System.Windows.Forms.ComboBox();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
@@ -172,6 +171,7 @@
 			this.textBox9 = new System.Windows.Forms.TextBox();
 			this.groupBox12 = new System.Windows.Forms.GroupBox();
 			this.previewBox = new System.Windows.Forms.TextBox();
+			this.textBox10 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.attributes.SuspendLayout();
 			this.tut1.SuspendLayout();
@@ -258,12 +258,12 @@
 			// 
 			// enchanting
 			// 
+			this.enchanting.Controls.Add(this.textBox10);
 			this.enchanting.Controls.Add(this.numericUpDown5);
 			this.enchanting.Controls.Add(this.comboBox9);
 			this.enchanting.Controls.Add(this.comboBox8);
 			this.enchanting.Controls.Add(this.numericUpDown4);
 			this.enchanting.Controls.Add(this.comboBox7);
-			this.enchanting.Controls.Add(this.comboBox6);
 			this.enchanting.Controls.Add(this.button3);
 			this.enchanting.Controls.Add(this.button2);
 			this.enchanting.Controls.Add(this.button1);
@@ -278,7 +278,7 @@
 			// numericUpDown5
 			// 
 			this.numericUpDown5.Enabled = false;
-			this.numericUpDown5.Location = new System.Drawing.Point(757, 22);
+			this.numericUpDown5.Location = new System.Drawing.Point(749, 22);
 			this.numericUpDown5.Name = "numericUpDown5";
 			this.numericUpDown5.Size = new System.Drawing.Size(112, 20);
 			this.numericUpDown5.TabIndex = 9;
@@ -287,7 +287,7 @@
 			// 
 			this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox9.FormattingEnabled = true;
-			this.comboBox9.Location = new System.Drawing.Point(575, 22);
+			this.comboBox9.Location = new System.Drawing.Point(567, 22);
 			this.comboBox9.Name = "comboBox9";
 			this.comboBox9.Size = new System.Drawing.Size(176, 21);
 			this.comboBox9.TabIndex = 8;
@@ -310,7 +310,7 @@
             "TF_PENIS",
             "TF_BREASTS",
             "TF_VAGINA"});
-			this.comboBox8.Location = new System.Drawing.Point(390, 22);
+			this.comboBox8.Location = new System.Drawing.Point(382, 22);
 			this.comboBox8.Name = "comboBox8";
 			this.comboBox8.Size = new System.Drawing.Size(179, 21);
 			this.comboBox8.TabIndex = 7;
@@ -318,7 +318,7 @@
 			// 
 			// numericUpDown4
 			// 
-			this.numericUpDown4.Location = new System.Drawing.Point(168, 22);
+			this.numericUpDown4.Location = new System.Drawing.Point(160, 22);
 			this.numericUpDown4.Name = "numericUpDown4";
 			this.numericUpDown4.Size = new System.Drawing.Size(102, 20);
 			this.numericUpDown4.TabIndex = 6;
@@ -334,20 +334,10 @@
             "DRAIN",
             "MINOR_DRAIN",
             "MAJOR_DRAIN"});
-			this.comboBox7.Location = new System.Drawing.Point(276, 22);
+			this.comboBox7.Location = new System.Drawing.Point(268, 21);
 			this.comboBox7.Name = "comboBox7";
 			this.comboBox7.Size = new System.Drawing.Size(108, 21);
 			this.comboBox7.TabIndex = 5;
-			// 
-			// comboBox6
-			// 
-			this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox6.Enabled = false;
-			this.comboBox6.FormattingEnabled = true;
-			this.comboBox6.Location = new System.Drawing.Point(47, 21);
-			this.comboBox6.Name = "comboBox6";
-			this.comboBox6.Size = new System.Drawing.Size(116, 21);
-			this.comboBox6.TabIndex = 4;
 			// 
 			// button3
 			// 
@@ -1744,6 +1734,15 @@
 			this.previewBox.Size = new System.Drawing.Size(647, 673);
 			this.previewBox.TabIndex = 0;
 			// 
+			// textBox10
+			// 
+			this.textBox10.Location = new System.Drawing.Point(51, 23);
+			this.textBox10.Name = "textBox10";
+			this.textBox10.ReadOnly = true;
+			this.textBox10.Size = new System.Drawing.Size(100, 20);
+			this.textBox10.TabIndex = 10;
+			this.textBox10.Text = "CLOTHING";
+			// 
 			// ClothingForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1766,6 +1765,7 @@
 			this.tut1.ResumeLayout(false);
 			this.tut1.PerformLayout();
 			this.enchanting.ResumeLayout(false);
+			this.enchanting.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1834,7 +1834,6 @@
 		private System.Windows.Forms.ComboBox comboBox8;
 		private System.Windows.Forms.NumericUpDown numericUpDown4;
 		private System.Windows.Forms.ComboBox comboBox7;
-		private System.Windows.Forms.ComboBox comboBox6;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
@@ -1951,5 +1950,6 @@
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.ComboBox listEdit;
 		private System.Windows.Forms.Label label21;
+		private System.Windows.Forms.TextBox textBox10;
 	}
 }

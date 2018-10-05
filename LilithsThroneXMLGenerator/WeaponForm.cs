@@ -179,7 +179,7 @@ namespace LilithsThroneXMLGenerator
 		//data grid view
 		private void button1_Click(object sender, EventArgs e)
 		{
-			if (Enchantments < numericUpDown3.Value)
+			if (Enchantments < numericUpDown4.Value)
 			{
 				if (comboBox8.Text != "")
 				{ 
@@ -188,7 +188,7 @@ namespace LilithsThroneXMLGenerator
 						if (comboBox10.Text != "")
 						{
 							int b = dataGridView1.Rows.Add();
-							dataGridView1.Rows[b].Cells[0].Value = comboBox7.Text;
+							dataGridView1.Rows[b].Cells[0].Value = textBox16.Text;
 							dataGridView1.Rows[b].Cells[1].Value = numericUpDown5.Value;
 							dataGridView1.Rows[b].Cells[2].Value = comboBox8.Text;
 							dataGridView1.Rows[b].Cells[3].Value = comboBox9.Text;

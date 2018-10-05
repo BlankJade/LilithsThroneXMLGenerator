@@ -39,7 +39,6 @@
 			this.comboBox9 = new System.Windows.Forms.ComboBox();
 			this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
 			this.comboBox8 = new System.Windows.Forms.ComboBox();
-			this.comboBox7 = new System.Windows.Forms.ComboBox();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
@@ -132,6 +131,7 @@
 			this.button8 = new System.Windows.Forms.Button();
 			this.groupBox12 = new System.Windows.Forms.GroupBox();
 			this.previewBox = new System.Windows.Forms.TextBox();
+			this.textBox16 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tut1.SuspendLayout();
@@ -207,12 +207,12 @@
 			// 
 			// enchanting
 			// 
+			this.enchanting.Controls.Add(this.textBox16);
 			this.enchanting.Controls.Add(this.numericUpDown6);
 			this.enchanting.Controls.Add(this.comboBox10);
 			this.enchanting.Controls.Add(this.comboBox9);
 			this.enchanting.Controls.Add(this.numericUpDown5);
 			this.enchanting.Controls.Add(this.comboBox8);
-			this.enchanting.Controls.Add(this.comboBox7);
 			this.enchanting.Controls.Add(this.button3);
 			this.enchanting.Controls.Add(this.button2);
 			this.enchanting.Controls.Add(this.button1);
@@ -275,18 +275,6 @@
 			this.comboBox8.Name = "comboBox8";
 			this.comboBox8.Size = new System.Drawing.Size(108, 21);
 			this.comboBox8.TabIndex = 5;
-			// 
-			// comboBox7
-			// 
-			this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox7.Enabled = false;
-			this.comboBox7.FormattingEnabled = true;
-			this.comboBox7.Items.AddRange(new object[] {
-            "WEAPONS"});
-			this.comboBox7.Location = new System.Drawing.Point(47, 21);
-			this.comboBox7.Name = "comboBox7";
-			this.comboBox7.Size = new System.Drawing.Size(116, 21);
-			this.comboBox7.TabIndex = 4;
 			// 
 			// button3
 			// 
@@ -1275,6 +1263,15 @@
 			this.previewBox.Size = new System.Drawing.Size(647, 673);
 			this.previewBox.TabIndex = 0;
 			// 
+			// textBox16
+			// 
+			this.textBox16.Location = new System.Drawing.Point(53, 23);
+			this.textBox16.Name = "textBox16";
+			this.textBox16.ReadOnly = true;
+			this.textBox16.Size = new System.Drawing.Size(100, 20);
+			this.textBox16.TabIndex = 10;
+			this.textBox16.Text = "WEAPON";
+			// 
 			// WeaponForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1294,6 +1291,7 @@
 			this.tut1.ResumeLayout(false);
 			this.tut1.PerformLayout();
 			this.enchanting.ResumeLayout(false);
+			this.enchanting.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1365,7 +1363,6 @@
 		private System.Windows.Forms.ComboBox comboBox9;
 		private System.Windows.Forms.NumericUpDown numericUpDown5;
 		private System.Windows.Forms.ComboBox comboBox8;
-		private System.Windows.Forms.ComboBox comboBox7;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
@@ -1429,5 +1426,6 @@
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.GroupBox groupBox13;
 		private System.Windows.Forms.TextBox textBox15;
+		private System.Windows.Forms.TextBox textBox16;
 	}
 }

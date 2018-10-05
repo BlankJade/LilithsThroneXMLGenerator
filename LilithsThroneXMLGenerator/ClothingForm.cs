@@ -796,7 +796,7 @@ namespace LilithsThroneXMLGenerator
 					if (comboBox8.Text != "")
 					{
 						int b = dataGridView1.Rows.Add();
-						dataGridView1.Rows[b].Cells[0].Value = comboBox6.Text;
+						dataGridView1.Rows[b].Cells[0].Value = textBox10.Text;
 						dataGridView1.Rows[b].Cells[1].Value = numericUpDown4.Value;
 						dataGridView1.Rows[b].Cells[2].Value = comboBox7.Text;
 						dataGridView1.Rows[b].Cells[3].Value = comboBox8.Text;
@@ -985,8 +985,6 @@ namespace LilithsThroneXMLGenerator
 		{
 			Hide();
 			Owner.Show();
-		}
-
-		
+		}				
 	}
 }

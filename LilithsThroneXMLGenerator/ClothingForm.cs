@@ -681,18 +681,7 @@ namespace LilithsThroneXMLGenerator
 					colour6.SetItemCheckState(i, CheckState.Unchecked);
 				}
 			}
-		}
-		private void checkBox1_CheckedChanged(object sender, EventArgs e)
-		{
-			if (checkBox1.Checked == true)
-			{
-				textBox3.Enabled = false;
-			}
-			else
-			{
-				textBox3.Enabled = true;
-			}
-		}
+		}		
 		private void checkBox2_CheckedChanged(object sender, EventArgs e)
 		{
 			if (checkBox2.Checked == true)

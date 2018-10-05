@@ -29,7 +29,7 @@ namespace LilithsThroneXMLGenerator
 		{
 			foreach (XElement element in data.Descendants("damageVariance"))
 			{
-				comboBox5.Items.Add(element.Value);				
+				comboBox5.Items.Add(element.Value);
 			}
 			foreach (XElement element in data.Descendants("spell"))
 			{
@@ -62,17 +62,7 @@ namespace LilithsThroneXMLGenerator
 				secd.Items.Add(element.Value);
 			}
 		}
-		private void checkBox1_CheckedChanged(object sender, EventArgs e)
-		{
-			if (checkBox1.Checked == true)
-			{
-				textBox2.Enabled = false;
-			}
-			else
-			{
-				textBox2.Enabled = true;
-			}
-		}
+		
 		private void checkBox2_CheckedChanged(object sender, EventArgs e)
 		{
 			if (checkBox2.Checked == true)
